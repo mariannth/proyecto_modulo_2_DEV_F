@@ -1,0 +1,330 @@
+/* Variables */
+:root {
+    --black-color: #0a044a;
+    --dark-gray: #464444;        /* Gris oscuro */
+    --midnight-blue: #02305f;    /* Azul muy oscuro */
+    --dark-blue: #004080;        /* Azul oscuro */
+    --medium-blue: #0073e6;      /* Azul medio */
+    --accent-blue: #66b3ff;      /* Azul claro */
+    --light-gray: #2b5bc2;       /* Gris claro para contrastar */
+    --white-color: #ffffff;      /* Blanco */
+    --color-texto: #333;         /* Gris oscuro para el texto */
+    --color-background: #6abeef; /* Fondo de la página */
+    --color-principal: #181111;     /* Color principal */
+    --color-blanco: #fff;        /* Blanco */
+}
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background-color: var(--color-background);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-blue);
+}
+
+a:hover {
+    color: var(--medium-blue);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(45deg, var(--dark-blue), var(--medium-blue)); /* Degradado entre azul oscuro y azul medio */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.navbar-brand:hover {
+    color: var(--accent-blue);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, var(--midnight-blue), var(--dark-blue)); /* Degradado de azul muy oscuro a azul oscuro */
+    text-align: center;
+    color: var(--white-color);
+    padding: 70px 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero button {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: var(--accent-blue);
+    transform: scale(1.1);
+}
+
+/* Sección de productos */
+section h2, section h1 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid var(--medium-blue);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.card-text {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.btn-outline-primary {
+    border-color: var(--medium-blue);
+    color: var(--medium-blue);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--medium-blue);
+    color: var(--white-color);
+}
+
+/* Formulario de contacto */
+form {
+    background-color: var(--white-color);
+    border: 2px solid var(--dark-blue);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+form input, form textarea {
+    border: 1px solid var(--dark-gray);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--medium-blue);
+    outline: none;
+    box-shadow: 0 0 5px var(--medium-blue);
+}
+
+form button {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent-blue);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero button {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+}
+
+/* Header */
+.navbar {
+    background: linear-gradient(45deg, var(--dark-blue), var(--medium-blue)); /* Degradado de azul oscuro a azul medio */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-blue);
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to top, var(--dark-gray), var(--midnight-blue)); /* Degradado de gris oscuro a azul medianoche */
+    color: var(--white-color);
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-blue);
+    transform: scale(1.2);
+}
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.card {
+    flex-shrink: 0;
+}
+
+/* Estilo para las tarjetas de productos */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionales */
+.container {
+    margin-top: 30px;
+}
+
+.btn-group button {
+    margin: 5px;
+}
+
+#productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-body button {
+    width: 100%;
+}
+
+/* Estilo para las tarjetas del carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.cart-item-info h5 {
+    margin: 0;
+}
+
+.cart-item-info p {
+    margin: 5px 0;
+}
+
+/* Estilo del total */
+#totalPrice {
+    font-weight: bold;
+}
