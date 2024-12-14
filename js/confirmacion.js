@@ -11,7 +11,7 @@ async function generatePDF() {
     const { width, height } = page.getSize();
 
     // Título del documento
-    page.drawText('Comprobante de Compra', {
+    page.drawText('Comprobante de Compra - BeautyLook Shop', {
         x: 50,
         y: height - 50,
         size: 24,

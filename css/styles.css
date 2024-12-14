@@ -532,8 +532,8 @@ form .btn-primary {
 }
 
 .carousel-item img {
-    width: 200%; /* Ajusta el ancho de la imagen al contenedor */
-    height: 200px; /* Fija una altura consistente */
+    width: 500%; /* Ajusta el ancho de la imagen al contenedor */
+    height: 500px; /* Fija una altura consistente */
     object-fit: contain; /* Recorta la imagen para llenar el área sin deformarse */
     display: block; /* Elimina espacios en línea extra alrededor de las imágenes */
 }
