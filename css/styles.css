@@ -11,6 +11,8 @@
     --color-background: #ef6aef; /* Fondo de la página */
     --color-principal: #3e223c;     /* Color principal */
     --color-blanco: #fff;        /* Blanco */
+    --color-categoria:#e1e1e1;
+    --color-hover-cat:#ff56d8;
 }
 
 /* Reset de estilos */
@@ -548,5 +550,71 @@ form .btn-primary {
 @media (min-width: 1024px) {
     .card {
         max-width: 250px; /* Reduce el tamaño de las tarjetas en pantallas grandes */
+    }
+}
+
+.catalogo{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+.contenido h2{
+    color: var(--white-color);
+}
+
+.categoria{
+    width: 15rem;
+    height: 15rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    text-align: center;
+    background-color: var(--color-categoria);
+    transition: background-color 0.3s;
+    animation: aparecer 0.3s ease-out forwards;
+}
+
+.categoria:hover{
+    background-color: var(--color-hover-cat);
+}
+
+.contenido{
+    text-align: center;
+    background: linear-gradient(to bottom, var(--midnight-blue), var(--dark-blue));
+    color: var(--white-color);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateY(60px); /* Posición inicial */
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0); /* Posición final */
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .catalogo{
+        grid-template-columns: repeat(3 , 1fr);
+        grid-gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .catalogo{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .catalogo{
+        grid-template-columns:repeat(1 , 1fr);
+        grid-gap: 1rem;
     }
 }

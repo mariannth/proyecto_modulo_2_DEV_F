@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportyShop - Productos</title>
+    <title>Productos - BeautyLook Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
@@ -14,7 +14,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">SportyShop</a>
+            <a class="navbar-brand" href="index.html">🛍️BeautyLook Shop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,14 +38,41 @@
         </div>
     </nav>
 
+
     <!-- Filtro de Categorías -->
-    <section class="container my-5">
+    <!-- <section class="container my-5">
         <h2 class="text-center">Categorías de Productos</h2>
         <div class="btn-group d-flex justify-content-center">
             <button class="btn btn-primary" onclick="filterProducts('nadar')">Ropa para Nadar</button>
             <button class="btn btn-primary" onclick="filterProducts('correr')">Ropa para Correr</button>
             <button class="btn btn-primary" onclick="filterProducts('escalar')">Ropa para Escalar</button>
         </div>
+    </section> -->
+    <section class="catalogo" id="catalogo">
+        <div class="categoria" data-seccion="escalar" onclick="filterProducts('escalar')">
+            <h2>🏃‍♂️ Ropa deportiva</h2>
+            <p>Explora nuestra sección de ropa para el gimnasio y actividades al aire libre.</p>
+        </div>
+        <div class="categoria" data-seccion="invierno" onclick="filterProducts('invierno')">
+            <h2>❄️ Ropa de invierno</h2>
+            <p>Explora nuestra sección que te mantendrá abrigado en los días fríos.</p>
+        </div>
+        <div class="categoria" data-seccion="promociones" onclick="filterProducts('promociones')">
+            <h2>🔥 Promociones</h2>
+            <p>Descubre nuestras mejores ofertas y descuentos esta temporada.</p>
+        </div>
+        <div class="categoria" data-seccion="calzado" onclick="filterProducts('calzado')">
+            <h2>👟 Calzado</h2>
+            <p>Encuentra tu calzado ideal para cualquier temporada.</p>
+        </div>
+        <div class="categoria" data-seccion="novedades" onclick="filterProducts('novedades')">
+            <h2>✨ Novedades</h2>
+            <p>Conoce los últimos lanzamientos de la tienda.</p>
+        </div>
+    </section>
+    <section class="contenido" id="contenido">
+        <h2>Bienvenido a la tienda de ropa</h2>
+        <p>Selecciona una categoría para explorar nuestros productos.</p>
     </section>
 
     <!-- Productos -->

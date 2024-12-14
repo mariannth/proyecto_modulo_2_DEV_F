@@ -60,7 +60,7 @@ function filterProducts(category) {
 
 // Función para mostrar las tarjetas de productos
 function displayProducts(productsToDisplay) {
-  const container = document.getElementById("productCards");
+  const container = document.getElementById("contenido");
   container.innerHTML = ""; // Limpiar la sección de productos
 
   productsToDisplay.forEach((product) => {
