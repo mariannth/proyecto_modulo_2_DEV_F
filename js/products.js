@@ -85,7 +85,7 @@ const products = [
     name: "Blusa de Algodón",
     description: "Blusa cómoda para cualquier ocasión.",
     price: 299.00,
-    image: "./src/blusa_mujer.jpg",
+    image: "./src/blusa_mujer.jpeg",
   },
   {
     id: 11,
@@ -127,7 +127,7 @@ const products = [
     name: "Suéter de Niña",
     description: "Suéter suave y cálido para niñas.",
     price: 249.00,
-    image: "./src/sueter_nina.jpg",
+    image: "./src/sueter_nina.avif",
   },
 
   // Categoría: Ropa de Hombre
@@ -145,7 +145,7 @@ const products = [
     name: "Pantalones Cortos",
     description: "Pantalones cortos para el verano.",
     price: 249.00,
-    image: "./src/pantalones_hombre.jpg",
+    image: "./src/pantalones_hombre.jpeg",
   },
   {
     id: 18,
@@ -153,7 +153,7 @@ const products = [
     name: "Chaqueta Deportiva",
     description: "Chaqueta ligera para actividades al aire libre.",
     price: 699.00,
-    image: "./src/chaqueta_hombre.jpg",
+    image: "./src/chaqueta_hombre.webp",
   },
 
   // Categoría: Ropa de Niño
@@ -163,7 +163,7 @@ const products = [
     name: "Camiseta de Niño",
     description: "Camiseta divertida para niños.",
     price: 150.00,
-    image: "./src/camiseta_nino.jpg",
+    image: "./src/camiseta_nino.jpeg",
   },
   {
     id: 20,
@@ -171,7 +171,7 @@ const products = [
     name: "Pantalones de Niño",
     description: "Pantalones cómodos para jugar.",
     price: 200.00,
-    image: "./src/pantalones_nino.jpg",
+    image: "./src/pantalones_nino.avif",
   },
   {
     id: 21,
@@ -179,7 +179,7 @@ const products = [
     name: "Sudadera de Niño",
     description: "Sudadera cálida para días fríos.",
     price: 299.00,
-    image: "./src/sudadera_nino.jpg",
+    image: "./src/sudadera_nino.jpeg",
   },
 
   // Categoría: Productos de Belleza
@@ -189,13 +189,13 @@ const products = [
     name: "Crema Hidratante",
     description: "Crema para hidratar la piel seca.",
     price: 120.00,
-    image: "./src/crema_belleza.jpg",
+    image: "./src/crema_belleza.webp",
   },
   {
     id: 23,
     category: "belleza",
-    name: "Champú Voluminizador",
-    description: "Champú para dar volumen al cabello.",
+    name: "Shampoo Voluminizador",
+    description: "Shampoo para dar volumen al cabello.",
     price: 180.00,
     image: "./src/shampoo_belleza.jpg",
   },
@@ -215,7 +215,7 @@ const products = [
     name: "Zapatillas Deportivas",
     description: "Zapatillas ligeras para deportes.",
     price: 499.00,
-    image: "./src/zapatillas.jpg",
+    image: "./src/zapatillas.webp",
   },
   {
     id: 26,
@@ -231,7 +231,7 @@ const products = [
     name: "Sandalias para Mujer",
     description: "Sandalias cómodas para los días calurosos.",
     price: 299.00,
-    image: "./src/sandalias_mujer.jpg",
+    image: "./src/sandalias_mujer.jpeg",
   },
 ];
 
