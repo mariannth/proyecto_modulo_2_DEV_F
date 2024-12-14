@@ -5,16 +5,16 @@ const products = [
     category: "nadar",
     name: "Bañador Deportivo",
     description: "Bañador ideal para nadadores.",
-    price: 20,
-    image: "https://via.placeholder.com/300",
+    price: 399.00,
+    image: "./src/traje de baño.jpg",
   },
   {
     id: 2,
     category: "nadar",
     name: "Gorro de Nadar",
     description: "Gorro ajustable para nadadores.",
-    price: 10,
-    image: "https://via.placeholder.com/300",
+    price: 235.50,
+    image: "./src/gorra.webp",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const products = [
     name: "Zapatillas Running",
     description: "Zapatillas ligeras para correr.",
     price: 50,
-    image: "https://via.placeholder.com/300",
+    image: "./src/zapatos.jpg",
   },
   {
     id: 4,
@@ -30,23 +30,23 @@ const products = [
     name: "Pantalones Running",
     description: "Pantalones cómodos para correr.",
     price: 35,
-    image: "https://via.placeholder.com/300",
+    image: "./src/ropa.jpeg",
   },
   {
     id: 5,
-    category: "escalar",
-    name: "Camisa Escalada",
-    description: "Camisa resistente para escalar.",
+    category: "correr",
+    name: "Conjunto deportivo ",
+    description: "Ropa ligera para ejercitarse.",
     price: 30,
-    image: "https://via.placeholder.com/300",
+    image: "./src/pants.jpg",
   },
   {
     id: 6,
     category: "escalar",
-    name: "Guantes Escalada",
-    description: "Guantes para una mejor protección.",
+    name: "Ropa para Escalar",
+    description: "Ropa resistente para escalar.",
     price: 25,
-    image: "https://via.placeholder.com/300",
+    image: "./src/escalar.jpeg",
   },
 ];
 
@@ -65,7 +65,7 @@ function displayProducts(productsToDisplay) {
 
   productsToDisplay.forEach((product) => {
     const card = `
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" id="productsContainer">
                 <div class="card">
                     <img src="${product.image}" class="card-img-top" alt="${product.name}">
                     <div class="card-body">

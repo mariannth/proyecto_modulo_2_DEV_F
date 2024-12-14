@@ -1,16 +1,15 @@
 /* Variables */
 :root {
-    --black-color: #0a044a;
-    --dark-gray: #464444;        /* Gris oscuro */
-    --midnight-blue: #02305f;    /* Azul muy oscuro */
-    --dark-blue: #004080;        /* Azul oscuro */
-    --medium-blue: #0073e6;      /* Azul medio */
-    --accent-blue: #66b3ff;      /* Azul claro */
-    --light-gray: #2b5bc2;       /* Gris claro para contrastar */
+    --black-color: #4c075e;
+    --dark-gray: #4d154a;        /* Gris oscuro */
+    --midnight-blue: #5a046b;    /* Azul muy oscuro */
+    --dark-blue: #9b078f;        /* Azul oscuro */
+    --medium-blue: #cb00e6;      /* Azul medio */
+    --accent-blue: #eb66ff;      /* Azul claro */
+    --light-gray: #9f2bc2;       /* Gris claro para contrastar */
     --white-color: #ffffff;      /* Blanco */
-    --color-texto: #333;         /* Gris oscuro para el texto */
-    --color-background: #6abeef; /* Fondo de la página */
-    --color-principal: #181111;     /* Color principal */
+    --color-background: #ef6aef; /* Fondo de la página */
+    --color-principal: #3e223c;     /* Color principal */
     --color-blanco: #fff;        /* Blanco */
 }
 
@@ -28,6 +27,11 @@ body {
     color: var(--color-texto);
     background-color: var(--color-background);
 }
+h1, h2, h3 {
+    color: var(--color-blanco);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 a {
     text-decoration: none;
@@ -42,6 +46,10 @@ a:hover {
 .navbar {
     background: linear-gradient(45deg, var(--dark-blue), var(--medium-blue)); /* Degradado entre azul oscuro y azul medio */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;           /* Centrar elementos verticalmente */
     padding: 10px 20px;
 }
 
@@ -96,6 +104,20 @@ section h2, section h1 {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    border: 1px solid var(--medium-blue);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--white-color);
+    /* flex: 1 1 calc(33.333% - 20px);  */
+    /* max-width: calc(33.333% - 20px); Limitar ancho máximo */
+    box-sizing: border-box;
+    width: 100%; /* Predeterminado para pantallas pequeñas */
+     max-width: 300px; /*Limita el tamaño de cada tarjeta */
+    margin: 1rem auto; /* Centra las tarjetas y agrega espacio entre ellas */
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
+    display: inline-block; /* Asegura que las tarjetas estén alineadas */
+
 }
 
 .card:hover {
@@ -106,6 +128,32 @@ section h2, section h1 {
 .card img {
     border-radius: 5px;
     transition: all 0.3s ease;
+    width: 100%; /* Asegura que la imagen llene el contenedor */
+    height: 200px; /* Tamaño consistente para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen si es necesario para mantener proporción */
+    border-bottom: 1px solid #ddd; /* Divide la imagen del contenido */
+}
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para los botones */
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .card img:hover {
@@ -140,6 +188,9 @@ form {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;       /* Alinear elementos verticalmente */
+    gap: 15px;                    /* Espaciado entre los elementos */
 }
 
 form label {
@@ -173,28 +224,11 @@ form button:hover {
     background-color: var(--accent-blue);
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
 
-    .hero button {
-        font-size: 0.9rem;
-    }
-
-    .card img {
-        max-height: 180px;
-    }
+.navbar-nav {
+    display: flex;
+    gap: 15px; /* Separación entre los enlaces */
 }
-
-/* Header */
-.navbar {
-    background: linear-gradient(45deg, var(--dark-blue), var(--medium-blue)); /* Degradado de azul oscuro a azul medio */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
-}
-
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
@@ -230,27 +264,6 @@ form button:hover {
     width: 100%;
 }
 
-/* Footer */
-.footer {
-    background: linear-gradient(to top, var(--dark-gray), var(--midnight-blue)); /* Degradado de gris oscuro a azul medianoche */
-    color: var(--white-color);
-    padding: 20px 0;
-}
-
-.footer p {
-    margin: 10px 0;
-}
-
-.social-icons {
-    margin: 15px 0;
-}
-
-.social-icons a {
-    color: var(--white-color);
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
 
 .social-icons a:hover {
     color: var(--accent-blue);
@@ -263,14 +276,9 @@ form button:hover {
     padding: 10px 0;
 }
 
-.card {
-    flex-shrink: 0;
-}
 
-/* Estilo para las tarjetas de productos */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -287,8 +295,10 @@ form button:hover {
 
 #productsContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap;              /* Permitir que los elementos se ajusten en líneas */
+    gap: 20px;                    /* Espacio entre tarjetas */
+    justify-content: center;      /* Centrar las tarjetas horizontalmente */
+    align-items: flex-start;      /* Alinear las tarjetas al inicio */
 }
 
 .card-body button {
@@ -327,4 +337,216 @@ form button:hover {
 /* Estilo del total */
 #totalPrice {
     font-weight: bold;
+}
+
+/* Botones reutilizables */
+.btn-primary {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue);
+    transform: scale(1.1);
+}
+
+
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-blue);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, var(--midnight-blue), var(--dark-blue));
+    text-align: center;
+    color: var(--white-color);
+    padding: 70px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero .btn-primary {
+    margin-top: 20px;
+}
+
+/* Sección de productos */
+section {
+    margin-bottom: 40px;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.card-text {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+/* Formularios */
+form {
+    background-color: var(--white-color);
+    border: 2px solid var(--dark-blue);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+form input, form textarea {
+    border: 1px solid var(--dark-gray);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--medium-blue);
+    outline: none;
+    box-shadow: 0 0 5px var(--medium-blue);
+}
+
+form .btn-primary {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to top, var(--dark-gray), var(--midnight-blue));
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre los elementos */
+    align-items: center;           /* Centrar elementos verticalmente */
+    flex-wrap: wrap;               /* Permitir que los elementos se ajusten si hay poco espacio */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Responsividad en la página */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .btn-primary {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Cambiar a 2 columnas en pantallas pequeñas */
+        max-width: calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+        max-width: 100%;
+    }
+}
+/* Contenedor de productos */
+.products-grid {
+    display: flex;                /* Activar Flexbox */
+    flex-wrap: wrap;              /* Permitir que las tarjetas pasen a nuevas filas si es necesario */
+    gap: 20px;                    /* Espaciado uniforme entre tarjetas */
+    justify-content: center;      /* Centrar horizontalmente las tarjetas */
+    align-items: flex-start;      /* Alinear las tarjetas al inicio */
+    margin-top: 20px;
+}
+
+/* Tarjetas individuales */
+.products-grid .card {
+    flex: 1 1 calc(33.333% - 20px); /* Ajustar el tamaño para que ocupen un tercio del ancho disponible */
+    max-width: calc(33.333% - 20px); /* Limitar el ancho máximo al mismo valor */
+    box-sizing: border-box;         /* Incluir el padding en el tamaño total */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .products-grid .card {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid .card {
+        flex: 1 1 100%;             /* Una sola columna en pantallas pequeñas */
+        max-width: 100%;
+    }
+}
+
+.carousel-item img {
+    width: 200%; /* Ajusta el ancho de la imagen al contenedor */
+    height: 200px; /* Fija una altura consistente */
+    object-fit: contain; /* Recorta la imagen para llenar el área sin deformarse */
+    display: block; /* Elimina espacios en línea extra alrededor de las imágenes */
+}
+/* Diseño responsivo */
+@media (min-width: 768px) {
+    .card {
+        display: inline-block; /* Alineación horizontal en pantallas medianas */
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        max-width: 250px; /* Reduce el tamaño de las tarjetas en pantallas grandes */
+    }
 }
